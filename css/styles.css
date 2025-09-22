@@ -1,0 +1,13 @@
+
+html,body,#app{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Arial}
+#app{display:flex}
+#panel{width:340px;background:#0b1220;color:#e5e7eb;padding:14px;overflow:auto}
+#panel h1{font-size:18px;margin:4px 0 10px;color:#fff}
+#panel section{background:#0e172a;border:1px solid #1f2a44;border-radius:10px;padding:10px;margin-bottom:12px}
+#panel label{display:block;margin:8px 0}
+#panel input[type=number]{width:90px}
+.controls button{margin-right:6px}
+.notice{margin-top:8px;background:#f59e0b;color:#111827;padding:6px 8px;border-radius:6px;display:none}
+.notice.show{display:block}
+#map{flex:1}
+.leaflet-tooltip{background:#1f2937;color:#e5e7eb;border:0;border-radius:6px;padding:4px 6px}
