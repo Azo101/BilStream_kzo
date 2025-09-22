@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>BilStream — Magnum OSM</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <aside id="panel">
+      <h1>BilStream — Magnum OSM</h1>
+      <section>
+        <label>Погода
+          <select id="weather">
+            <option value="clear">Ясно</option>
+            <option value="cloudy">Облачно</option>
+            <option value="rain">Дождь</option>
+            <option value="fog">Туман</option>
+            <option value="snow">Снег</option>
+          </select>
+        </label>
+        <label>Время суток: <span id="timeVal">12:00</span>
+          <input type="range" id="timeOfDay" min="0" max="24" step="0.25" value="12">
+        </label>
+        <label>Скорость симуляции
+          <input type="range" id="simSpeed" min="0.1" max="3" step="0.1" value="1">
+        </label>
+        <label>Люди <input type="number" id="peopleCount" value="120"></label>
+        <label>Машины <input type="number" id="carsCount" value="80"></label>
+      </section>
+      <section>
+        <h3>Билборды</h3>
+        <button id="addBillboard">Добавить (клик по карте)</button>
+        <button id="clearBillboards">Удалить все</button>
+        <label>Радиус (м) <input type="range" id="bbRadius" min="30" max="150" step="5" value="90"></label>
+        <label>Угол (°) <input type="range" id="bbFov" min="30" max="160" step="5" value="110"></label>
+        <div id="stats"></div>
+      </section>
+      <div class="controls">
+        <button id="toggle">Запустить</button>
+        <button id="reset">Сброс</button>
+      </div>
+      <div id="notice" class="notice"></div>
+    </aside>
+    <main id="map"></main>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>
